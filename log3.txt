@@ -1,0 +1,558 @@
+bank_yolov8.yaml
+WARNING ⚠️ no model scale passed. Assuming scale='n'.
+New https://pypi.org/project/ultralytics/8.3.97 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics YOLOv8.1.34 🚀 Python-3.9.21 torch-2.0.1+cu117 CUDA:2 (NVIDIA A800 80GB PCIe, 81342MiB)
+                                                           CUDA:6 (NVIDIA A800 80GB PCIe, 81342MiB)
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=bank_yolov8.yaml, data=bank_person_voc.yaml, epochs=100, time=None, patience=100, batch=128, imgsz=480, save=True, save_period=-1, val_period=1, cache=False, device=2,6, workers=8, project=runs/yolov8/person, name=train3, exist_ok=False, pretrained=False, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=True, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=None, workspace=4, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/yolov8/person/train3
+WARNING ⚠️ no model scale passed. Assuming scale='n'.
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]                  
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]                 
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 22        [15, 18, 21]  1    751507  ultralytics.nn.modules.head.Detect           [1, [64, 128, 256]]           
+bank_YOLOv8 summary: 225 layers, 3011043 parameters, 3011027 gradients, 8.2 GFLOPs
+
+[34m[1mDDP:[0m debug command /home/wangjing7236/miniconda3/envs/yolov10/bin/python -m torch.distributed.run --nproc_per_node 2 --master_port 44855 /home/wangjing7236/.config/yolov10/DDP/_temp_0s84l2vu139996713164368.py
+Ultralytics YOLOv8.1.34 🚀 Python-3.9.21 torch-2.0.1+cu117 CUDA:2 (NVIDIA A800 80GB PCIe, 81342MiB)
+                                                           CUDA:6 (NVIDIA A800 80GB PCIe, 81342MiB)
+WARNING ⚠️ no model scale passed. Assuming scale='n'.
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+yolov8n.pt
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/GuiZhouBankImages/batch_01/images/vrm_QRBZXYCC3_083400-083800_HIK_004150.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/GuiZhouBankImages/batch_03/images/D01_20241030084129_017650.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/GuiZhouBankImages/batch_03/images/D01_20241030084129_022050.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/GuiZhouBankImages/batch_03/images/D01_20241030170055_001900.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273271,14512000241d04ce.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [       1.21      1.5375]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273271,1605100024a4975e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0018]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273271,1dc4e000cb5b67c3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0015]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273271,1e97800008a6fcb5.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0029]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273271,1ee1f00020973ebf.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0035]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273271,1f3ca000086fb919.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0013]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273271,1fb49000659eaedc.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0014]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273271,21f7f00077d5f4ec.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0015      1.0015]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273271,22b030001c7be4ec.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.003]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273271,40f7000dd919364.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.2644]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273271,71fa000f8d1f794.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.002]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,10177500068f778fb.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0089]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,1061720002486ebaa.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0024]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,10eced000cead4fd8.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0025]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,10f1b60006d757b58.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1111      1.7311]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,1104c1000d6cced60.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,11f5b000dd7628b0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0961]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,1213e4000a8a35b40.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.252       1.886]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,13581d000d8424f84.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,13a9b40005572d3f7.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0008]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,13ada4000395a4704.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.4393      1.0954]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,13e04f00024ee6368.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0024]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,142fc5000d3907b56.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0031]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,1476a60004172ecc3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.044      1.1579      1.2268]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,149e10009c8fd534.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1037      1.0825]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,14f3d4000471c8c46.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0015]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,21270000fc80ab10.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.3689      1.0889]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,2a924000693d5eca.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0482      1.0956]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,40c3c000afe5f728.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0036]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,458c60004eadcd4d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.3188      1.9217]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,4cdb60003fbf0aa8.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.325      1.3126]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,549f50009811f8ca.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0422      1.2066      1.6925]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,5f07f0001e720351.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0017]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,5f5a9000b1c91bea.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0929]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,652b10000cf0bd82.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,6cda4000fcdb3a6e.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,6e980000895a22dc.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0017]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,713b500034e17edd.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.4923      2.0728]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,71406000bb7efebb.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0024]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,75a3e0001c4fd39b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0043]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,7cf41000cfb00518.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0011]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,7dea5000204fa91d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0021]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,7dec400081a27513.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0017]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,8466200001318c96.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0033      1.0017]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,84f12000f327cceb.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,90382000cf8d60da.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.2478      1.3233]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,91ac1000c7870866.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0052]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,922cf00088290600.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0006]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,92a4200001e05574.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0007]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,94f15000df67785e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.3458      2.2239]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,9baed000fcc0aab2.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1222      1.2946      1.8527]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,9bf68000a3c22939.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1476      1.0515      1.9709      1.0444      1.7539]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,9f287000515fde18.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.3132]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,9fb460004471259c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0072]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,9ff630008646b3cc.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,b1d2d0007aeb0a1a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0045]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,b39df0008c1f49c6.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.3989]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,bb1c900032feeb91.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.3533]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,c02bb000f48f8a62.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0084]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,ca89c000265dd0df.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0022]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,d71a900015d59f10.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,d982e00012ef15bc.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0015]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,dbe84000d70c05b7.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0031]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,e1d360001ad83910.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0852      1.3944]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,e8434000b4158a9b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.001]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273275,ec3a70004a15288c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0042      1.0021]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,11762f000c90c7561.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.2879]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,11e6300003ce423d1.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.3882]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,11ec5d0005174e9ca.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0272]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,120318000e33c5438.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1432]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,12fe65000560e9d4d.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,132316000125e6ddc.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.6192      1.8347]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,16c7a0000490fb17.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0062]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,18e2e0001a43ab63.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0928      1.1611      1.4568]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,1b22e00046ba4ca0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      2.116]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,2fc0e0003aa48e3a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0454]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,36a85000d1aca484.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0054      1.0018]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,39188000f24c9731.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0031]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,3ae99000458ec616.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0052]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,3dab4000325fab30.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0022]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,409be00042964a9d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0012]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,44f3700059f2aa8e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.003       1.001]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,61331000fe77bcde.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0065]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,69a8b000febacb1a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1417]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,75de9000b0ac8d8c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0057]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,795f200007aec66a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,8417300005a70d0c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0083]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,874a20004ca0cbe5.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0032]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,89b9400061977f26.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1258]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,8d88600063a4a8c0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0024]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,94077000dffffe0e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0028]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,969c90000a955e10.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0028]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,99ba8000d939bbf3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0037]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,9ce130001ccdf9e6.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0015]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,a75b700005057b73.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0182      1.2042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,afef3000d03e4ab5.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.005      1.0025]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,b35a50009ed94db7.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0024]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,b5d16000011d18a1.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0043]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,b5d8a000f416b92b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0048]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,cb03d00025de7c2c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0015]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,ccfe7000a941c025.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0944      1.7869]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,d30ae000416b4f14.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0015]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,e9be100099c2b011.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0043]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/273278,f131000728bb54a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [       1.01]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,1014d7000cc2938d9.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0313      1.6734]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,1089f000ed30bd92.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.003]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,11255c000f8310494.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0336]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,117c26000fd1aa019.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.4312      2.1021]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,1218f00053877316.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0016      1.0016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,14691000173c3bf9.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0019]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,15b400002cda2cb6.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0008]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,15bbf000218910b3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0044      1.0022]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,1c5de000bb4cbf23.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0027]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,1d30d0003f270fbd.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0765      1.8914]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,1d3b100025b7fbfe.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.5647]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,1e45600078ad17b1.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0076]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,1e5f7000c479116e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0015]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,1e87c000a4e6d187.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,26728000381e9d04.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0022]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,2897c00092549854.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0067]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,2b153000325660c2.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0018]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,358af00078d26e59.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0508      1.3779      1.4283]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,5e1f5000e60294f7.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0044]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,64195000033e9a96.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0915      1.0157]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,6f02b000087aee72.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.3281         1.2]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,925c7000e8192aa7.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,9825e0005ec48d2a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0025]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,9b1da0002307d46f.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0025      1.0025]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,9b9ec0005be2542e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.6715      2.7266]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,a1a3a0000bc6ebcd.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0025]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,ab631000cc74a86c.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,b2afa00059ac3836.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0029]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,b418c0004a326bac.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0017]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,bf12c000f7803776.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0311      1.1093]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,c87f3000fc678c33.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0019]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,d421800085951268.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0013]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,d912e00083b9a7d1.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0421]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,db4d000ba4aa7dc.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.002      1.0132]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,dce3000fb62cc99.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0113]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,dfdc900068089e43.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0048]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/282555,ea08000538c2d46.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1012]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283081,48de000f0ef3e2c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0091]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283081,8b170000098e5a3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0017]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283081,acc3000a2dec97c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0013]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283081,ae56000aa99d429.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0312      1.4109]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283081,c80b0004be56f2a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.2834      2.0101]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283081,d284000efa7b10a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0099]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283081,f4d000c183be7c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0061       1.003]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283554,1f6050005600cd76.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0369]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283554,22b3900063a6617b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0094]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283554,2cc090006214ed2f.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.575]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283554,2f4c2000cf485273.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0025]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283554,303c30000184e0d9.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283554,34cdc0001076b637.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0042      1.0014]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283554,a20a000423a4340.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0228      1.1416]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283554,ae970004fad7aff.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0019]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283554,f523000e9ce9460.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0033]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283647,10fbf0006fd11fc9.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0556]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283647,1351b000e97228c2.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283991,1952d00075968ee5.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.2479      1.0438]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283991,195d5000be4db018.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283991,1ba5f0002d277f0a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.365       1.163      1.1837      1.0864]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283991,1df0b000744a80a3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0729]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283991,1e02b00054f665c4.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.4333      1.9021]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283991,1e4eb0007633dfc6.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0043]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283991,2241f0009d6f1f16.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0291]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283991,4a8300014bb4adb.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.3125      2.1937]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283991,535a0006f663a53.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.3021      1.1458]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,127b1000502101de.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0021]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,1c340002666c73c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0021]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,23170005da4708b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,293f000664cdc00.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0625      1.8771]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,555700019be676a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.2641      1.5563]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,8e830006cb2af43.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0048]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,c1ea0000345181d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0965      1.2214]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,c56000a0e28cf1.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1187      1.3229]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,cd52000a9d6bc67.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0376      1.3792]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,daa8000f7c032d2.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1396      1.1479]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,ee9000556e431b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/283992,f24000ca88efa3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.3438]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,1504d00075dc3f94.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0067]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,1bcc900044a6efb0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1542      1.7229]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,1c06a0006b5e5a06.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0036]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,1d9c600030e0e0a2.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0081]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,1f27a0006848ad7c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0009]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,20d3d000bb634e54.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,211f2000f9c8b1f0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0013]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,23f0005477e99d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,2799d0000ce2fe0f.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0025]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,28f77000eb128a71.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0029]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,48d80001addbbba.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0187]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,5574000f0c578db.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0312]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,91f7000a46774c0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0014]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,a550000fa4b6453.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0021]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/person_det_data/PublicData/CrowdHuman/images/284193,c2f10002ab2c059.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0896      1.2125]
+Plotting labels to runs/yolov8/person/train3/labels.jpg... 
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+[34m[1moptimizer:[0m SGD(lr=0.01, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.001), 63 bias(decay=0.0)
+Image sizes 480 train, 480 val
+Using 16 dataloader workers
+Logging results to [1mruns/yolov8/person/train3[0m
+Starting training for 100 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043     0.0661      0.163     0.0246    0.00594
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.452      0.416      0.407      0.206
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.735      0.484      0.531      0.241
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.806      0.591      0.687      0.402
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.889      0.656       0.73      0.477
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.948      0.713      0.799      0.539
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.929      0.674      0.785       0.54
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.925      0.653       0.76      0.526
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.923      0.692      0.799      0.552
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.939      0.704      0.808       0.57
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.947      0.709      0.806      0.571
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.935       0.68      0.795      0.568
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043       0.96      0.706      0.817      0.575
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961      0.689       0.81      0.589
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.958      0.732      0.824      0.594
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.889      0.712      0.794       0.58
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.915      0.745      0.834      0.613
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.956       0.72      0.822      0.604
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043       0.95      0.703      0.823      0.609
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.838      0.787      0.838       0.62
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043       0.95      0.708      0.832      0.615
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.942      0.726      0.831      0.619
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.946      0.728      0.832      0.618
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043       0.94      0.753      0.853      0.636
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.939      0.739      0.846      0.632
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.974      0.669      0.829      0.625
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.932      0.758      0.846      0.635
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.926      0.767      0.849      0.641
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.934      0.775      0.845       0.64
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.949      0.765      0.852      0.645
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.935      0.773      0.857      0.647
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.937      0.766      0.851      0.643
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961       0.74      0.844       0.64
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.959      0.754      0.852      0.645
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.957      0.762      0.854      0.646
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.766      0.855      0.646
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.966      0.769      0.857       0.65
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.772      0.859       0.65
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.774       0.86      0.651
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.963      0.774       0.86      0.652
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.962      0.777      0.861      0.653
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043       0.96       0.78      0.861      0.654
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.959      0.781      0.861      0.654
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.958      0.781      0.862      0.655
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.957       0.78      0.862      0.655
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.959       0.78      0.863      0.655
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043       0.96       0.78      0.862      0.655
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.959       0.78      0.863      0.655
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961       0.78      0.863      0.656
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043       0.96      0.781      0.863      0.656
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961       0.78      0.864      0.656
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961      0.781      0.864      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961      0.781      0.864      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961      0.782      0.865      0.658
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961      0.782      0.865      0.658
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043       0.96      0.782      0.864      0.658
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961      0.783      0.865       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043       0.96      0.783      0.865       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.959      0.783      0.866       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043       0.96      0.785      0.866       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961      0.785      0.866       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961      0.784      0.865       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961      0.783      0.865       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.961      0.785      0.865       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.962      0.785      0.866       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.963      0.785      0.866       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.786      0.866       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.787      0.866       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.787      0.866       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.788      0.866       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.786      0.866       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.786      0.866       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.786      0.865       0.66
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.785      0.865      0.659
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.785      0.865      0.659
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.785      0.864      0.659
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.783      0.864      0.658
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.783      0.863      0.658
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.966      0.782      0.863      0.658
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.782      0.862      0.658
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.782      0.862      0.658
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.782      0.862      0.658
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.782      0.862      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.966      0.782      0.863      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.782      0.862      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.782      0.862      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.782      0.862      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.783      0.862      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.783      0.862      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.785      0.863      0.657
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.785      0.863      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.964      0.784      0.863      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.783      0.863      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.965      0.783      0.863      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.963      0.783      0.863      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.963      0.783      0.863      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.963      0.784      0.863      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.963      0.784      0.863      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.963      0.784      0.863      0.657
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       3988       6043      0.962      0.784      0.863      0.657
+
+100 epochs completed in 2.390 hours.
+Optimizer stripped from runs/yolov8/person/train3/weights/last.pt, 6.2MB
+Optimizer stripped from runs/yolov8/person/train3/weights/best.pt, 6.2MB
+
+Validating runs/yolov8/person/train3/weights/best.pt...
+Ultralytics YOLOv8.1.34 🚀 Python-3.9.21 torch-2.0.1+cu117 CUDA:2 (NVIDIA A800 80GB PCIe, 81342MiB)
+                                                           CUDA:6 (NVIDIA A800 80GB PCIe, 81342MiB)
+bank_YOLOv8 summary (fused): 168 layers, 3005843 parameters, 0 gradients, 8.1 GFLOPs
