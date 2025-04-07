@@ -10,3 +10,8 @@ model.train(data='/Work/wangjing/data/face_attr_data/yolo_data/yolo_hat_dataset/
             epochs=100, batch=480, imgsz=224,device='6', 
             pretrained=False, multi_scale=True, project='runs/yolov8-cls/hat')
 
+# yolo val model=runs/yolov8-cls/hat/train/weights/best.pt data=/Work/wangjing/data/face_attr_data/yolo_data/yolo_hat_dataset batch=16 imgsz=224 project=runs/yolov8-cls/hat
+
+# train --训练集
+# test --验证集,在训练过程中测试的验证集
+# val --测试集，在训练结束后的测试集
