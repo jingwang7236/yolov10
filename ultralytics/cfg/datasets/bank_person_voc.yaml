@@ -1,0 +1,47 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# PASCAL VOC dataset http://host.robots.ox.ac.uk/pascal/VOC by University of Oxford
+# Documentation: # Documentation: https://docs.ultralytics.com/datasets/detect/voc/
+# Example usage: yolo train data=VOC.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── VOC  ← downloads here (2.8 GB)
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: /Work/wangjing/data/person_det_data
+train: # train images (relative to 'path')  16551 images
+  - GuiZhouBankImages/batch_01/images
+  - GuiZhouBankImages/batch_02/images
+  - GuiZhouBankImages/batch_03/images
+  - GuiZhouBankImages/batch_04/images
+  - GuiZhouBankImages/batch_05/images
+  - GuiZhouBankImages/batch_06/images
+  - GuiZhouBankImages/batch_07/images
+  - GuiZhouBankImages/batch_08/images
+  - GuiZhouBankImages/batch_11/images
+  - PublicData/CrowdHuman/images
+  - PublicData/WiderPerson/images
+  - PublicData/FallDataset/images
+
+val: # val images (relative to 'path')  4952 images
+    # - TestSet/images/guizhou_show_202502
+    # - TestSet/images/支行管理端测试视频0108
+    # - CompanyShowData/comp_show_fall_person/images
+    # - PublicData/FallDataset/images
+    # - TestSet/images/ATM
+    # - GuiZhouBankImages/银行室内多人场景数据整理
+    # - tmp_data/jnt1210_22s/images  # 临时数据
+    - tmp_data/company_show_data/images  # 临时数据
+test: # test images (optional)
+  # - TestSet/images/guizhou_show_202502
+  # - TestSet/images/支行管理端测试视频0108
+    # - TestSet/images/
+  - PublicData/FallDataset/images
+  # - CompanyShowData/comp_show_fall_person/images
+    
+
+# TODO:增加需要mask的label
+# Classes
+names:
+  0: person
+  # 1: head

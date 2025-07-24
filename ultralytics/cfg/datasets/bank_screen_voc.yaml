@@ -1,0 +1,32 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# PASCAL VOC dataset http://host.robots.ox.ac.uk/pascal/VOC by University of Oxford
+# Documentation: # Documentation: https://docs.ultralytics.com/datasets/detect/voc/
+# Example usage: yolo train data=VOC.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── VOC  ← downloads here (2.8 GB)
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: /Work/wangjing/data/phone_screen_data
+train: # train images (relative to 'path')  16551 images
+  - yixing_data/images
+  - company_show_data/images
+  - guizhou_data_2024/images/guizhou_bank
+  - guizhou_data_2024/images/guizhou_poc_show_02  #大厅
+  - guizhou_data_2024/images/guizhou_poc_show_03  #大厅
+  - guizhou_data_2024/images/guizhou_poc_show_04  #大厅
+  - guizhou_data_2024/images/guizhou_poc_show_05  # 现金区
+  - guizhou_data_2025/images
+
+val: # val images (relative to 'path')  同源测试集
+  - guizhou_data_2024/images/guizhou_poc_show_02  #大厅,演示玩手机
+  # - guizhou_data_2024/images/guizhou_bank/pocceshichangjing/xianjinqu  # 电脑屏幕
+test: # test images (optional)
+  - guizhou_data_2024/images/guizhou_poc_show_02
+  # - guizhou_data_2024/images/guizhou_bank/pocceshichangjing/xianjinqu
+
+# Classes
+names:
+  0: phone
+  1: screen

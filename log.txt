@@ -1,8 +1,9 @@
 bank_yolov8.yaml
 WARNING ⚠️ no model scale passed. Assuming scale='n'.
-Ultralytics YOLOv8.1.34 🚀 Python-3.9.21 torch-2.0.1+cu117 CUDA:5 (NVIDIA A800 80GB PCIe, 81342MiB)
-[34m[1mengine/trainer: [0mtask=detect, mode=train, model=bank_yolov8.yaml, data=bank_screen_voc.yaml, epochs=100, time=None, patience=100, batch=192, imgsz=640, save=True, save_period=-1, val_period=1, cache=False, device=5, workers=8, project=runs/yolov8/screen, name=train5, exist_ok=False, pretrained=False, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=True, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=None, workspace=4, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/yolov8/screen/train5
-Overriding model.yaml nc=1 with nc=2
+New https://pypi.org/project/ultralytics/8.3.120 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics YOLOv8.1.34 🚀 Python-3.9.21 torch-2.0.1+cu117 CUDA:4 (NVIDIA A800 80GB PCIe, 81342MiB)
+                                                           CUDA:6 (NVIDIA A800 80GB PCIe, 81342MiB)
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=bank_yolov8.yaml, data=bank_header_voc.yaml, epochs=200, time=None, patience=100, batch=128, imgsz=640, save=True, save_period=-1, val_period=1, cache=False, device=4,6, workers=8, project=runs/yolov8/header, name=train3, exist_ok=False, pretrained=False, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=True, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=None, workspace=4, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/yolov8/header/train3
 WARNING ⚠️ no model scale passed. Assuming scale='n'.
 
                    from  n    params  module                                       arguments                     
@@ -28,337 +29,1194 @@ WARNING ⚠️ no model scale passed. Assuming scale='n'.
  19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
  20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
  21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
- 22        [15, 18, 21]  1    751702  ultralytics.nn.modules.head.Detect           [2, [64, 128, 256]]           
-bank_YOLOv8 summary: 225 layers, 3011238 parameters, 3011222 gradients, 8.2 GFLOPs
+ 22        [15, 18, 21]  1    751507  ultralytics.nn.modules.head.Detect           [1, [64, 128, 256]]           
+bank_YOLOv8 summary: 225 layers, 3011043 parameters, 3011027 gradients, 8.2 GFLOPs
 
+[34m[1mDDP:[0m debug command /home/wangjing7236/miniconda3/envs/yolov10/bin/python -m torch.distributed.run --nproc_per_node 2 --master_port 49427 /home/wangjing7236/.config/yolov10/DDP/_temp_tuxke9l4140280181223040.py
+Ultralytics YOLOv8.1.34 🚀 Python-3.9.21 torch-2.0.1+cu117 CUDA:4 (NVIDIA A800 80GB PCIe, 81342MiB)
+                                                           CUDA:6 (NVIDIA A800 80GB PCIe, 81342MiB)
+WARNING ⚠️ no model scale passed. Assuming scale='n'.
 Freezing layer 'model.22.dfl.conv.weight'
 [34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
 yolov8n.pt
 [34m[1mAMP: [0mchecks passed ✅
-[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/phone_screen_data/guizhou_data_2024/images/guizhou_bank/qitawangdian/xianjinqu/images_json_xml/ch17_20241021173904_022750.jpg: 1 duplicate labels removed
-[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/phone_screen_data/guizhou_data_2024/images/guizhou_bank/qitawangdian/xianjinqu/images_json_xml/ch25_20241021173904_022050.jpg: 1 duplicate labels removed
-[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/phone_screen_data/guizhou_data_2025/images/guizhou_bank03/20241225-wanshouji_quchong_have_phone/gui_quchong/cvr_黔省分行1F现金区1号柜1-44-音_165500-181500_HIK_unique_1/Image477.jpg: 1 duplicate labels removed
-[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/phone_screen_data/yixing_data/images/yixing_bank02/现金柜区2/城东柜员全景2_20240313152801-20240313153801_1_unique_1/Image384.jpg: 1 duplicate labels removed
-[34m[1mtrain: [0mNew cache created: /Work/wangjing/data/phone_screen_data/company_show_data/labels/company_show_01/会议室演示有手机/D01_20241224145517.cache
-[34m[1mval: [0mNew cache created: /Work/wangjing/data/phone_screen_data/guizhou_data_2024/labels/guizhou_bank/pocceshichangjing/xianjinqu/images_json_xml.cache
-Plotting labels to runs/yolov8/screen/train5/labels.jpg... 
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_01/images/vrm_QRBZXXJQHJ6-Y_083800-085000_HIK_012900.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_03/images/D01_20241030084129_017650.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_03/images/D01_20241030084129_022050.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_03/images/D01_20241101082957_015050.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_03/images/D01_20241101084004_000200.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_03/images/D01_20241101084004_026800.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_03/images/D01_20241101170055_019250.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_03/images/D01_20241101170055_020600.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_03/images/D01_20241101170055_021350.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_05/images/D03_20241031170022_053900.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_05/images/D03_20241031170022_054600.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_05/images/D11_20241030172145_034950.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_05/images/D11_20241031082640_010050.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_05/images/D11_20241101080259_060550.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,160e7000b3a0550e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0017]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,18ecb000a62fba9a.jpg: ignoring corrupt image/label: negative label values [  -0.015674   -0.019854]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,1a0d6000b9e1f5b7.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.001]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,1f3ca000086fb919.jpg: ignoring corrupt image/label: negative label values [  -0.050125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,1fb000d54c60bc.jpg: ignoring corrupt image/label: negative label values [  -0.029514   -0.029514]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,1fe29000ddadf112.jpg: ignoring corrupt image/label: negative label values [  -0.029135   -0.050557   -0.070266]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,210520005ce71b18.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0014]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,2110a000f105f8ff.jpg: ignoring corrupt image/label: negative label values [  -0.058076  -0.0090744   -0.012704   -0.012704]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,226da0004d36be3c.jpg: ignoring corrupt image/label: negative label values [  -0.031142]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,2277e000891f2e71.jpg: ignoring corrupt image/label: negative label values [  -0.011667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,22c0c000a5a7388e.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,22f940006fbbb182.jpg: ignoring corrupt image/label: negative label values [ -0.0036298]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,23527000c4985efb.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0006]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,2631a000f1a44944.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0187]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,263cf000b065caf8.jpg: ignoring corrupt image/label: negative label values [  -0.021484]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,270360009044d878.jpg: ignoring corrupt image/label: negative label values [ -0.0053333]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,282ca000d69ffb39.jpg: ignoring corrupt image/label: negative label values [  -0.016667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,291e00002044f179.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0272]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,29218000df2a6d8c.jpg: ignoring corrupt image/label: negative label values [-0.00097656]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,299570006cb822b1.jpg: ignoring corrupt image/label: negative label values [  -0.030928]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,29fe7000f8bd106d.jpg: ignoring corrupt image/label: negative label values [  -0.054927  -0.0080775]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,2a413000fdc7d2ac.jpg: ignoring corrupt image/label: negative label values [-0.00045455]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,2a8280003e1262e3.jpg: ignoring corrupt image/label: negative label values [  -0.042866]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,2c4bb000b97e592c.jpg: ignoring corrupt image/label: negative label values [  -0.038523   -0.016051  -0.0064205]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,2c908000e8e477d2.jpg: ignoring corrupt image/label: negative label values [ -0.0041667  -0.0041667  -0.0013889]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,2ca970007afb499f.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0286]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,2ce5f00046993a35.jpg: ignoring corrupt image/label: negative label values [  -0.011893]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,2edd0000235d0e3.jpg: ignoring corrupt image/label: negative label values [     -0.006]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,32640007e02c071.jpg: ignoring corrupt image/label: negative label values [    -0.0025]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,450900094de3727.jpg: ignoring corrupt image/label: negative label values [  -0.061667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,49190000d389944.jpg: ignoring corrupt image/label: negative label values [  -0.018889]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,842e0004b7d98b5.jpg: ignoring corrupt image/label: negative label values [  -0.027464]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,8d27000d962b5de.jpg: ignoring corrupt image/label: negative label values [ -0.0019531]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,949c000920180b5.jpg: ignoring corrupt image/label: negative label values [ -0.0067295]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,9ffc000398542a4.jpg: ignoring corrupt image/label: negative label values [ -0.0028571]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,a1dd0001077d1d8.jpg: ignoring corrupt image/label: negative label values [  -0.071223]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,c9a300005923592.jpg: ignoring corrupt image/label: negative label values [  -0.017578]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,e291000150cea56.jpg: ignoring corrupt image/label: negative label values [  -0.019724   -0.023669   -0.033531   -0.017751   -0.017751   -0.023669   -0.025641   -0.029586   -0.021696]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,e38b000165dec86.jpg: ignoring corrupt image/label: negative label values [  -0.042026]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273271,fb48000b01fe0f2.jpg: ignoring corrupt image/label: negative label values [ -0.0059524  -0.0059524   -0.013889  -0.0019841  -0.0039683]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,101370002b1b4184.jpg: ignoring corrupt image/label: negative label values [  -0.011458]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,102921000b5d04ac5.jpg: ignoring corrupt image/label: negative label values [  -0.048485]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,103441000327c0473.jpg: ignoring corrupt image/label: negative label values [ -0.0084211   -0.044211    -0.11789]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,10760e00002f9a0e1.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0129]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,1094cf00099ee24da.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0434]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,10f7a600025e14d20.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,111470006a465947.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,1135300032a1fd33.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,120d0f000e42465b2.jpg: ignoring corrupt image/label: negative label values [  -0.027106]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,1298ce000e42f70d8.jpg: ignoring corrupt image/label: negative label values [  -0.018671   -0.013443]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,12ad90000961131ff.jpg: ignoring corrupt image/label: negative label values [  -0.020833]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,13585c0009eca6749.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0064]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,138516000448b2a38.jpg: ignoring corrupt image/label: negative label values [     -0.035     -0.0175]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,13eafc0005a053d56.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,13fb2e0007d9db255.jpg: ignoring corrupt image/label: negative label values [ -0.0095833]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,1419650000a19723b.jpg: ignoring corrupt image/label: negative label values [ -0.0024096]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,14b0340004648c69e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.001]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,14c3430004ee8bddf.jpg: ignoring corrupt image/label: negative label values [ -0.0014286]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,14caf500034ae1152.jpg: ignoring corrupt image/label: negative label values [  -0.010753]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,15f9000ff5056a4.jpg: ignoring corrupt image/label: negative label values [ -0.0015385]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,1743d000e2aaa6b3.jpg: ignoring corrupt image/label: negative label values [ -0.0010417]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,18b3b00071b83253.jpg: ignoring corrupt image/label: negative label values [  -0.078278]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,1b37d000e567d94f.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0062]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,1e6b600033334272.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,2039e0007b3334ea.jpg: ignoring corrupt image/label: negative label values [-0.00061275]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,212d7000efdc2022.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0031]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,25e0e000b9f394ae.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0006]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,27f29000cf7bb8c3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0012]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,2a5600025aa3e5d.jpg: ignoring corrupt image/label: negative label values [ -0.0079114]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,2a7eb00037543dde.jpg: ignoring corrupt image/label: negative label values [  -0.027264   -0.016553  -0.0038948  -0.0077897]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,2af980000234532f.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0008]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,2decb000702bb153.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0047]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,36c3e0006b9a4b58.jpg: ignoring corrupt image/label: negative label values [ -0.0047096   -0.015699  -0.0047096]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,395fc000740e82b3.jpg: ignoring corrupt image/label: negative label values [  -0.003012]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,3b9450008c0ecf30.jpg: ignoring corrupt image/label: negative label values [ -0.0087879]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,3d4ad000b59955eb.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0027]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,41036000945678ba.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0135]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,4cdb60003fbf0aa8.jpg: ignoring corrupt image/label: negative label values [ -0.0083333]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,4dcae000172cc99e.jpg: ignoring corrupt image/label: negative label values [  -0.013483]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,4e8f40006807f235.jpg: ignoring corrupt image/label: negative label values [  -0.051245   -0.011713]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,4e9d1000623d182f.jpg: ignoring corrupt image/label: negative label values [   -0.10661   -0.045045]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,508270007674f4e0.jpg: ignoring corrupt image/label: negative label values [  -0.013542   -0.019792   -0.053125   -0.036458   -0.027083   -0.027083   -0.041667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,5085200050ab4c82.jpg: ignoring corrupt image/label: negative label values [ -0.0037106]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,50ff000073907683.jpg: ignoring corrupt image/label: negative label values [ -0.0027778]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,52fe400065dd9f0d.jpg: ignoring corrupt image/label: negative label values [  -0.004717   -0.016509]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,547d4000ce45cb5c.jpg: ignoring corrupt image/label: negative label values [ -0.0016667       -0.01      -0.015]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,55341000a3adcc7b.jpg: ignoring corrupt image/label: negative label values [ -0.0046672]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,5792d000ba15e60e.jpg: ignoring corrupt image/label: negative label values [-0.00069444 -0.00069444 -0.00069444]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,586dd000a0835b35.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.001]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,59dc4000b708b076.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0094]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,5a009000e4696639.jpg: ignoring corrupt image/label: negative label values [ -0.0046875]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,5f5050003ea4e230.jpg: ignoring corrupt image/label: negative label values [  -0.015254   -0.022034]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,61a8a000098a3956.jpg: ignoring corrupt image/label: negative label values [  -0.054994]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,6598c000784a9441.jpg: ignoring corrupt image/label: negative label values [   -0.02982]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,69d1b0003d0c50b3.jpg: ignoring corrupt image/label: negative label values [  -0.002079]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,6a11d000f52c34a9.jpg: ignoring corrupt image/label: negative label values [  -0.011743]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,6b66d0008a664e59.jpg: ignoring corrupt image/label: negative label values [-0.00097656]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,6e980000895a22dc.jpg: ignoring corrupt image/label: negative label values [  -0.074653]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,712ea0001c24bcab.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,75a3e0001c4fd39b.jpg: ignoring corrupt image/label: negative label values [  -0.029979  -0.0021413]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,76cb60005cb0393a.jpg: ignoring corrupt image/label: negative label values [ -0.0016129]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,799bb0002d2e290a.jpg: ignoring corrupt image/label: negative label values [  -0.037825]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,7d48d000fc8ad71c.jpg: ignoring corrupt image/label: negative label values [   -0.00625]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,7dfa50000a7bcc9a.jpg: ignoring corrupt image/label: negative label values [ -0.0074074]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,8564d000f891bc31.jpg: ignoring corrupt image/label: negative label values [ -0.0057692]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,8c32600059f9c994.jpg: ignoring corrupt image/label: negative label values [   -0.11853    -0.03406]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,90382000cf8d60da.jpg: ignoring corrupt image/label: negative label values [ -0.0064655]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,9112c0009e43f868.jpg: ignoring corrupt image/label: negative label values [ -0.0065104]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,91e39000966236ee.jpg: ignoring corrupt image/label: negative label values [  -0.058565   -0.040996]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,9c56b000e975a086.jpg: ignoring corrupt image/label: negative label values [-0.00071429]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,a151d000e316b16b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,a22dc000cd21038b.jpg: ignoring corrupt image/label: negative label values [ -0.0088848]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,a3b7f000e6605b8e.jpg: ignoring corrupt image/label: negative label values [ -0.0014327]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,a6de0001783c16b.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,ad657000191f73fc.jpg: ignoring corrupt image/label: negative label values [  -0.012107  -0.0048426]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,afd2d0002bbd4946.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0362]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,b761c00026699423.jpg: ignoring corrupt image/label: negative label values [  -0.030435]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,ba3ad00096d0925e.jpg: ignoring corrupt image/label: negative label values [ -0.0041667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,bb042000d07e9d46.jpg: ignoring corrupt image/label: negative label values [  -0.025899 -0.00071942]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,bb11000055378506.jpg: ignoring corrupt image/label: negative label values [  -0.016743   -0.027397]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,c072600029598211.jpg: ignoring corrupt image/label: negative label values [  -0.057332]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,c6a030005cbfcad2.jpg: ignoring corrupt image/label: negative label values [ -0.0015785]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,c7b770003c8595ac.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.002]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,ccfcf000f21e6cc0.jpg: ignoring corrupt image/label: negative label values [ -0.0015385]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,cd3b10009f14310d.jpg: ignoring corrupt image/label: negative label values [   -0.00375]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,d18310005613d4e4.jpg: ignoring corrupt image/label: negative label values [ -0.0046189]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,d6318000b565d8b3.jpg: ignoring corrupt image/label: negative label values [ -0.0089699]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,d85d4000774dfb24.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0015]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,e0aa70002d9ce623.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0048]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,e3324000eaf2069e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0078]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,e80500007c6c8d32.jpg: ignoring corrupt image/label: negative label values [ -0.0025497]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,e9a190004e85d891.jpg: ignoring corrupt image/label: negative label values [ -0.0013889]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,f096b000fe53a9f1.jpg: ignoring corrupt image/label: negative label values [  -0.016155    -0.01454]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,f1681000dd39107a.jpg: ignoring corrupt image/label: negative label values [ -0.0081522]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,fade1000c936c0fc.jpg: ignoring corrupt image/label: negative label values [ -0.0089153]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,fb5f30002c54e675.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0119]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,fbbaf00051d98cd5.jpg: ignoring corrupt image/label: negative label values [   -0.00625]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273275,ffd3d000ccdfb5ee.jpg: ignoring corrupt image/label: negative label values [  -0.088328]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,10016d000d0d6e0e8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,108dfb000be2e44b5.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0038]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,1125ce0002a5136ad.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0038]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,1147e0000c037e664.jpg: ignoring corrupt image/label: negative label values [  -0.001046]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,119a44000f3a12eda.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0166]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,119c0e000850588a1.jpg: ignoring corrupt image/label: negative label values [ -0.0073222]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,11c46d000869cefa9.jpg: ignoring corrupt image/label: negative label values [  -0.067204   -0.068548]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,11ee080006d1bd31c.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,122e1000ff917bdd.jpg: ignoring corrupt image/label: negative label values [  -0.034746]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,1248d4000970271f7.jpg: ignoring corrupt image/label: negative label values [      -0.05]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,1296ab0007a4b681b.jpg: ignoring corrupt image/label: negative label values [      -0.05]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,12cd010002074926d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.001]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,12dd0000060b74783.jpg: ignoring corrupt image/label: negative label values [  -0.023148]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,13249000f69c3d1d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,1343b000139a1ee4.jpg: ignoring corrupt image/label: negative label values [  -0.012695]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,1348b500047a02ea5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,138ab20002f7f5abc.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0049]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,140027000669cc72e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0047]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,146061000762083cd.jpg: ignoring corrupt image/label: negative label values [ -0.0038119]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,14a56000af246fa1.jpg: ignoring corrupt image/label: negative label values [ -0.0015873]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,14e540002e0f2f9c.jpg: ignoring corrupt image/label: negative label values [     -0.009]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,1500b0004cbe9a38.jpg: ignoring corrupt image/label: negative label values [  -0.017613]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,171600004bdef419.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0032]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,2509500079f013bf.jpg: ignoring corrupt image/label: negative label values [   -0.01416]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,274e5000b4b3a5f7.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0017]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,28adc000dfadeecc.jpg: ignoring corrupt image/label: negative label values [ -0.0030769]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,28b69000fef4f198.jpg: ignoring corrupt image/label: negative label values [  -0.059623]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,2955b00087d70343.jpg: ignoring corrupt image/label: negative label values [ -0.0031898]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,2a8f20002aec76c3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0008]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,2e1220007d65839c.jpg: ignoring corrupt image/label: negative label values [  -0.012448]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,35a77000ae52e106.jpg: ignoring corrupt image/label: negative label values [ -0.0072595]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,35f4d000a53a393d.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,36f4500075920e1f.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0021]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,388230003e143747.jpg: ignoring corrupt image/label: negative label values [      -0.01]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,39753000c27de9c1.jpg: ignoring corrupt image/label: negative label values [  -0.049279]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,3ac7e000e57fecbd.jpg: ignoring corrupt image/label: negative label values [ -0.0061224]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,3ae99000458ec616.jpg: ignoring corrupt image/label: negative label values [   -0.02611   -0.002611]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,3aedd0002f3b6592.jpg: ignoring corrupt image/label: negative label values [    -0.0075     -0.0175      -0.015]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,3be80000e0c08214.jpg: ignoring corrupt image/label: negative label values [  -0.016548   -0.014184   -0.018913  -0.0070922  -0.0023641]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,409be00042964a9d.jpg: ignoring corrupt image/label: negative label values [   -0.01963]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,44f3700059f2aa8e.jpg: ignoring corrupt image/label: negative label values [     -0.007]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,456fb000a1fbc9ec.jpg: ignoring corrupt image/label: negative label values [     -0.018]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,49a6a000e0c6409d.jpg: ignoring corrupt image/label: negative label values [ -0.0058522  -0.0095099  -0.0051207  -0.0036576  -0.0036576  -0.0087783  -0.0073153    -0.01902   -0.011704   -0.027798   -0.014631]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,4a95600083a7b300.jpg: ignoring corrupt image/label: negative label values [ -0.0054545]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,51f5800018f993ef.jpg: ignoring corrupt image/label: negative label values [ -0.0054113]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,56f97000f69addd7.jpg: ignoring corrupt image/label: negative label values [ -0.0024414]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,584b8000250d5019.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0013]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,6a25600098cd18f7.jpg: ignoring corrupt image/label: negative label values [ -0.0091912]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,6ae8d000c02d71b1.jpg: ignoring corrupt image/label: negative label values [   -0.00625]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,6ec40005105d517.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0214]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,6f0900005d6cfcba.jpg: ignoring corrupt image/label: negative label values [   -0.04381]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,6f0b5000240355df.jpg: ignoring corrupt image/label: negative label values [ -0.0015625]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,70d990004983a325.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,71233000de8facd5.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0019]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,795970002db7ce6e.jpg: ignoring corrupt image/label: negative label values [     -0.005   -0.033333]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,7bf77000a7af74f0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0017]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,7c1e4000252d6a20.jpg: ignoring corrupt image/label: negative label values [ -0.0027778]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,7c26700072e82eb6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,7db2a000d26c1531.jpg: ignoring corrupt image/label: negative label values [  -0.021708]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,7dc920004c9b83b5.jpg: ignoring corrupt image/label: negative label values [  -0.023193]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,7fb12000cfc4a02d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0045]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,82978000582ee8da.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.002]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,841970006fdfc077.jpg: ignoring corrupt image/label: negative label values [  -0.028571]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,8a6650005a2d2583.jpg: ignoring corrupt image/label: negative label values [  -0.003125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,8e44100046bd23f0.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0009]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,96227000a594a813.jpg: ignoring corrupt image/label: negative label values [-0.00078125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,9840f00017b20b64.jpg: ignoring corrupt image/label: negative label values [  -0.012308]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,98e9c000df2f0b38.jpg: ignoring corrupt image/label: negative label values [  -0.011538]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,99177000ff21ad4c.jpg: ignoring corrupt image/label: negative label values [ -0.0068293   -0.004878   -0.016585   -0.004878]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,a040d00022e27ce7.jpg: ignoring corrupt image/label: negative label values [ -0.0087566]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,a0580001023c84a.jpg: ignoring corrupt image/label: negative label values [  -0.019048]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,a7805000f628d003.jpg: ignoring corrupt image/label: negative label values [ -0.0017256]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,aa0f00004e60e0e3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0005]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,aba5a0000c221bfa.jpg: ignoring corrupt image/label: negative label values [ -0.0016103  -0.0032206]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,abc11000bc4f451e.jpg: ignoring corrupt image/label: negative label values [ -0.0047059]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,ac77100060a37841.jpg: ignoring corrupt image/label: negative label values [ -0.0015625]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,ac876000f0ee11a5.jpg: ignoring corrupt image/label: negative label values [  -0.067708]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,aff2f0001d78a094.jpg: ignoring corrupt image/label: negative label values [  -0.049479]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,b11db000885447a6.jpg: ignoring corrupt image/label: negative label values [  -0.016046   -0.061891]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,b5d8a000f416b92b.jpg: ignoring corrupt image/label: negative label values [  -0.088942]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,ba67c0003fd8105a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0071]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,bb482000393d6b4d.jpg: ignoring corrupt image/label: negative label values [   -0.18118   -0.037647]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,bdeb4000afff9029.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0226]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,bea44000a380d942.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0047]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,c142a00037b64b8a.jpg: ignoring corrupt image/label: negative label values [ -0.0043573  -0.0065359]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,c14a50002453317c.jpg: ignoring corrupt image/label: negative label values [   -0.05625]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,c245d0002ea4bd8b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0014]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,c568000008585e02.jpg: ignoring corrupt image/label: negative label values [  -0.011799]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,c581c000100a549b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.001]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,c64ab00085787df5.jpg: ignoring corrupt image/label: negative label values [ -0.0022222]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,c739d0004342e6bc.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,c88e10004d04d198.jpg: ignoring corrupt image/label: negative label values [  -0.027586   -0.094828   -0.081034]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,cba2b000f7b63495.jpg: ignoring corrupt image/label: negative label values [    -0.0275]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,ccfe7000a941c025.jpg: ignoring corrupt image/label: negative label values [ -0.0048426  -0.0072639  -0.0096852]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,cf9420009a15bdd9.jpg: ignoring corrupt image/label: negative label values [ -0.0041667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,d3b1000f813397d.jpg: ignoring corrupt image/label: negative label values [ -0.0036232]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,d5284000a8dc3561.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0029]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,dfafb000b09dae53.jpg: ignoring corrupt image/label: negative label values [  -0.013333]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,ea52300020d8a4ce.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.025]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,f261000dd294015.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,f6c42000c09b6960.jpg: ignoring corrupt image/label: negative label values [     -0.005]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,f8fc6000b4104d87.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0029]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,fb1e8000b48e30c1.jpg: ignoring corrupt image/label: negative label values [-0.00076923]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,fec9e000079a53b1.jpg: ignoring corrupt image/label: negative label values [ -0.0018904]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/273278,ff544000176df0a5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,104947000affc06bc.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,104d300056f965bb.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0325]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,10b56000088d3c800.jpg: ignoring corrupt image/label: negative label values [  -0.011667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,1110a5000856061e9.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0037]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,1119fc0004a0f1c4b.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0074]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,113d2600055aa99c8.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.002]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,11659f0000ae7cab5.jpg: ignoring corrupt image/label: negative label values [   -0.16377]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,1165d30001eeb2d94.jpg: ignoring corrupt image/label: negative label values [     -0.001      -0.006      -0.016      -0.015      -0.014]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,11765c0004e6058ec.jpg: ignoring corrupt image/label: negative label values [ -0.0078125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,1193fb00098687010.jpg: ignoring corrupt image/label: negative label values [  -0.094828]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,11abf900095c2e711.jpg: ignoring corrupt image/label: negative label values [  -0.000625   -0.014058]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,11c3f20003d6ebf8c.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,11ccdb000b478f8af.jpg: ignoring corrupt image/label: negative label values [  -0.055469]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,12096200052eb8501.jpg: ignoring corrupt image/label: negative label values [     -0.041]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,12130a000222647c0.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,123e4b000e74ec6d8.jpg: ignoring corrupt image/label: negative label values [ -0.0048876]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,126c8000f5f0fda2.jpg: ignoring corrupt image/label: negative label values [ -0.0064815  -0.0037037  -0.0083333  -0.0046296]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,12cda000cea387d4.jpg: ignoring corrupt image/label: negative label values [  -0.011142   -0.018106  -0.0041783  -0.0027855   -0.013928]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,12e72000b285503d.jpg: ignoring corrupt image/label: negative label values [  -0.026354  -0.0039062]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,12f400006c94131b.jpg: ignoring corrupt image/label: negative label values [ -0.0057143   -0.010714]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,130fc00043df63fa.jpg: ignoring corrupt image/label: negative label values [ -0.0064815]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,137b4000b564ac79.jpg: ignoring corrupt image/label: negative label values [ -0.0064815  -0.0064815]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,1531d0008f8cea5a.jpg: ignoring corrupt image/label: negative label values [ -0.0039409  -0.0029557]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,15a080001859bf56.jpg: ignoring corrupt image/label: negative label values [ -0.0073314]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,163500089ab83de.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.002]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,16611000e32910a5.jpg: ignoring corrupt image/label: negative label values [     -0.025]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,1716e00091d32ade.jpg: ignoring corrupt image/label: negative label values [ -0.0026667  -0.0017778   -0.030222]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,1bfa6000a704da1f.jpg: ignoring corrupt image/label: negative label values [  -0.015873   -0.058201]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,1cd70004c559c53.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,1d3b100025b7fbfe.jpg: ignoring corrupt image/label: negative label values [  -0.036638  -0.0086207   -0.010776  -0.0043103   -0.010776   -0.010776   -0.021552   -0.015086   -0.015086   -0.012931]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,1d9f9000957a5328.jpg: ignoring corrupt image/label: negative label values [ -0.0040486]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,1e5f7000c479116e.jpg: ignoring corrupt image/label: negative label values [   -0.01909   -0.024963]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,2105e000628b82e0.jpg: ignoring corrupt image/label: negative label values [  -0.012994   -0.057471   -0.075962   -0.026487]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,230a0001c4cfe00.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,247e90002007cf25.jpg: ignoring corrupt image/label: negative label values [   -0.00064    -0.00128]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,24a0f0001ffa95ee.jpg: ignoring corrupt image/label: negative label values [  -0.035417]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,24bfa000e337867d.jpg: ignoring corrupt image/label: negative label values [    -0.0175]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,24f1400099db691d.jpg: ignoring corrupt image/label: negative label values [  -0.037681   -0.028019   -0.015459]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,2500f000dcc6d906.jpg: ignoring corrupt image/label: negative label values [ -0.0022222]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,251a7000bdcc5a55.jpg: ignoring corrupt image/label: negative label values [  -0.011583   -0.023166]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,25d42000fabe3ea7.jpg: ignoring corrupt image/label: negative label values [  -0.024414]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,26728000381e9d04.jpg: ignoring corrupt image/label: negative label values [  -0.037778       -0.04]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,2866b00073aa8257.jpg: ignoring corrupt image/label: negative label values [ -0.0040323]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,2876400059f5f7d3.jpg: ignoring corrupt image/label: negative label values [ -0.0067179]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,2a38b000ba6dc028.jpg: ignoring corrupt image/label: negative label values [  -0.064039]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,2b0c70007f240400.jpg: ignoring corrupt image/label: negative label values [  -0.013616]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,2b153000325660c2.jpg: ignoring corrupt image/label: negative label values [  -0.016364]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,2b3430000040be18.jpg: ignoring corrupt image/label: negative label values [ -0.0060241   -0.003012]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,2cbdd0009ddc111f.jpg: ignoring corrupt image/label: negative label values [ -0.0072727  -0.0036364  -0.0072727]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,2da88000d33705b5.jpg: ignoring corrupt image/label: negative label values [  -0.013333  -0.0088889]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,2dbeb000b30f597d.jpg: ignoring corrupt image/label: negative label values [ -0.0022198  -0.0033296]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,36ac1000843aa98d.jpg: ignoring corrupt image/label: negative label values [  -0.013889]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,3813e000313be5c1.jpg: ignoring corrupt image/label: negative label values [  -0.012897]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,38440000c02ed556.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0005]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,38ab8000bf335b45.jpg: ignoring corrupt image/label: negative label values [ -0.0011429]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,38d65000fe4c49c4.jpg: ignoring corrupt image/label: negative label values [ -0.0005144  -0.0005144]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,39f49000d4ca7ec9.jpg: ignoring corrupt image/label: negative label values [  -0.014981   -0.013109   -0.011236]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,3cd7c000c484728e.jpg: ignoring corrupt image/label: negative label values [     -0.058]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,3dde700043412110.jpg: ignoring corrupt image/label: negative label values [  -0.013319]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,3f4850002e5327a6.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0099]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,430560009a6957bf.jpg: ignoring corrupt image/label: negative label values [   -0.02125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,476510001b83931c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0008]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,4a159000b6f90abc.jpg: ignoring corrupt image/label: negative label values [-0.00035112]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,4bd5e00041405c76.jpg: ignoring corrupt image/label: negative label values [  -0.022016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,4cca20001782e56f.jpg: ignoring corrupt image/label: negative label values [  -0.026367]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,4f442000fc46026d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0181]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,4f5120007fa814f8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,5d27c000f90cd8b2.jpg: ignoring corrupt image/label: negative label values [ -0.0046948]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,644a100043e82337.jpg: ignoring corrupt image/label: negative label values [     -0.025      -0.026      -0.026]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,69179000c5608b15.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0047]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,69326000a31c15e6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,782e3000378de379.jpg: ignoring corrupt image/label: negative label values [ -0.0091146]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,78fe0000830f6715.jpg: ignoring corrupt image/label: negative label values [  -0.016835   -0.013468   -0.020202]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,7983c000438780da.jpg: ignoring corrupt image/label: negative label values [     -0.008]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,798f5000f43ee25b.jpg: ignoring corrupt image/label: negative label values [  -0.025899   -0.054676   -0.053957]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,79e54000dcb9e0ae.jpg: ignoring corrupt image/label: negative label values [ -0.0011876]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,79ffd000abbe117d.jpg: ignoring corrupt image/label: negative label values [     -0.007]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,7a52200020dbdd04.jpg: ignoring corrupt image/label: negative label values [ -0.0046904    -0.00125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,7ab36000e337e2d3.jpg: ignoring corrupt image/label: negative label values [   -0.02963   -0.016296]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,7b45d00049632bad.jpg: ignoring corrupt image/label: negative label values [  -0.046192]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,7b665000a3a42d30.jpg: ignoring corrupt image/label: negative label values [  -0.017778]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,7cc03000956a4053.jpg: ignoring corrupt image/label: negative label values [  -0.033515]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,7d2d60008cfeffc1.jpg: ignoring corrupt image/label: negative label values [ -0.0018744   -0.010309]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,7d95a000041a362e.jpg: ignoring corrupt image/label: negative label values [     -0.014]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,7dd70000db023b34.jpg: ignoring corrupt image/label: negative label values [  -0.035826]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,80527000562e5e54.jpg: ignoring corrupt image/label: negative label values [ -0.0035556]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,8059900063a1f9c2.jpg: ignoring corrupt image/label: negative label values [   -0.01487   -0.019517]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,80c010002b32f06f.jpg: ignoring corrupt image/label: negative label values [ -0.0019743]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,81fda000e33ef9ad.jpg: ignoring corrupt image/label: negative label values [  -0.023593]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,82c1f000c7226027.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0033]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,8a7bd000f959fa53.jpg: ignoring corrupt image/label: negative label values [ -0.0039062]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,8c5110001980e6c4.jpg: ignoring corrupt image/label: negative label values [ -0.0070258]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,8c62f000a0da0ebc.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0012]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,907d500072760d0d.jpg: ignoring corrupt image/label: negative label values [ -0.0032362]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,90e9d000dc21a4d5.jpg: ignoring corrupt image/label: negative label values [  -0.045588]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,91ae20000e8373f8.jpg: ignoring corrupt image/label: negative label values [ -0.0071365]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,92c5800010fcd01a.jpg: ignoring corrupt image/label: negative label values [ -0.0017361]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,94862000d44ac2ef.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0075]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,94f4b000d61fa187.jpg: ignoring corrupt image/label: negative label values [  -0.022222   -0.042222]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,982b2000cedee6f0.jpg: ignoring corrupt image/label: negative label values [ -0.0010438]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,9849200013a73e5e.jpg: ignoring corrupt image/label: negative label values [ -0.0031315  -0.0010438]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,984c900073e5a6b5.jpg: ignoring corrupt image/label: negative label values [ -0.0064815 -0.00092593  -0.0027778]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,9911600028067f78.jpg: ignoring corrupt image/label: negative label values [  -0.016327]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,9a5f80008898d31a.jpg: ignoring corrupt image/label: negative label values [  -0.021552]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,9b29f000ee38253d.jpg: ignoring corrupt image/label: negative label values [ -0.0050154]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,9d1310007eaaf168.jpg: ignoring corrupt image/label: negative label values [   -0.11747]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,9dc79000a5d82257.jpg: ignoring corrupt image/label: negative label values [ -0.0063291   -0.037975   -0.060127   -0.052215]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,9fccd000bfd31211.jpg: ignoring corrupt image/label: negative label values [ -0.0058594]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,9ff030005199deee.jpg: ignoring corrupt image/label: negative label values [  -0.017578]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,a05b10002b2774ee.jpg: ignoring corrupt image/label: negative label values [ -0.0034642]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,a68f1000444aba36.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,ad7700003063d2ad.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,ae037000712012d7.jpg: ignoring corrupt image/label: negative label values [  -0.022567   -0.023977]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,b074900077771c8c.jpg: ignoring corrupt image/label: negative label values [  -0.051389       -0.05   -0.048611]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,b126c00042b06fc6.jpg: ignoring corrupt image/label: negative label values [  -0.001269]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,b15e7000655fd475.jpg: ignoring corrupt image/label: negative label values [ -0.0055556]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,b387a0001536c131.jpg: ignoring corrupt image/label: negative label values [  -0.015636]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,b496e00048621c4f.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0079]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,b54dc000b16a46b4.jpg: ignoring corrupt image/label: negative label values [ -0.0017361]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,b8b90000084c32db.jpg: ignoring corrupt image/label: negative label values [  -0.015873]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,bcc8500096f8dcd4.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0006]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,c65f0008ffdec5e.jpg: ignoring corrupt image/label: negative label values [  -0.035714]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,c76e60004e542213.jpg: ignoring corrupt image/label: negative label values [ -0.0015625  -0.0015625    -0.00625  -0.0015625  -0.0015625   -0.003125  -0.0078125  -0.0015625  -0.0015625]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,c771d000640d6a0c.jpg: ignoring corrupt image/label: negative label values [  -0.011719   -0.022135  -0.0013021   -0.014323   -0.019531  -0.0065104  -0.0091146  -0.0013021   -0.018229  -0.0026042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,cfe0000d76800d0.jpg: ignoring corrupt image/label: negative label values [ -0.0014641]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,d00b200014f48270.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0062]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,d030d000c312f11b.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,d3e6b000f79c7047.jpg: ignoring corrupt image/label: negative label values [ -0.0028777  -0.0086331]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,d7b610002c6b51cc.jpg: ignoring corrupt image/label: negative label values [     -0.013]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,dc41000093b1e2a3.jpg: ignoring corrupt image/label: negative label values [   -0.03177  -0.0015129   -0.013616]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,ddcf300034446bb8.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.005]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,de0060006a827479.jpg: ignoring corrupt image/label: negative label values [ -0.0007716]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,de8d0000562955e.jpg: ignoring corrupt image/label: negative label values [   -0.01125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,e7d6f00046c1b14f.jpg: ignoring corrupt image/label: negative label values [ -0.0061538]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,f1f720006db7fbad.jpg: ignoring corrupt image/label: negative label values [ -0.0064748  -0.0014388    -0.01295]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,f4de0000e50600a2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,f96e30002e3bc845.jpg: ignoring corrupt image/label: negative label values [   -0.00375]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/282555,fe4f50003aa5b358.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0021]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,101ea000c752b703.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0044]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,102b30001263933a.jpg: ignoring corrupt image/label: negative label values [  -0.026389   -0.015278]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,11cae0008a98af90.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0035]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,13ebe0000b34669a.jpg: ignoring corrupt image/label: negative label values [  -0.047852]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,1da0b0001e05d6cc.jpg: ignoring corrupt image/label: negative label values [ -0.0022222]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,1f5a80008cda7c67.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0029      1.0174]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,2b1a00093986738.jpg: ignoring corrupt image/label: negative label values [ -0.0011667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,6437000494017b0.jpg: ignoring corrupt image/label: negative label values [  -0.048667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,7dc40003039d381.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.002]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,99fd000fb43e179.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0281]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,9e1e0006beb351c.jpg: ignoring corrupt image/label: negative label values [ -0.0039216]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283081,ae56000aa99d429.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0063]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,16c900004e9bc2ae.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.001]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,1b14c0000e3db4dd.jpg: ignoring corrupt image/label: negative label values [  -0.040752   -0.032393   -0.027168  -0.0083595]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,1ce3f0004ad23358.jpg: ignoring corrupt image/label: negative label values [ -0.0013021]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,1f27d000e532d8f9.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0035]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,1f4f200055fe7628.jpg: ignoring corrupt image/label: negative label values [  -0.018447  -0.0087379]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,1f57d000fb1e94a0.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,213b60000091e237.jpg: ignoring corrupt image/label: negative label values [ -0.0067708]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,2822c000e50c5573.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0075]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,28c10000ce705a1a.jpg: ignoring corrupt image/label: negative label values [  -0.046939]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,2aae8000f0ff2ae8.jpg: ignoring corrupt image/label: negative label values [  -0.013542   -0.021875   -0.014583   -0.022917   -0.028125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,2b0bb0007de5edcc.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,2b14500064fb09c8.jpg: ignoring corrupt image/label: negative label values [ -0.0043924  -0.0087848]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,2cd8300060c3df14.jpg: ignoring corrupt image/label: negative label values [ -0.0039062]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,331ca0008369a3cf.jpg: ignoring corrupt image/label: negative label values [ -0.0079818]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,3699400056a59b6c.jpg: ignoring corrupt image/label: negative label values [ -0.0098576   -0.010953   -0.007667  -0.0010953   -0.013143  -0.0010953   -0.007667   -0.007667   -0.015334   -0.017525  -0.0065717]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,51d9000697de552.jpg: ignoring corrupt image/label: negative label values [ -0.0030769]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,54600014724a62.jpg: ignoring corrupt image/label: negative label values [ -0.0065147]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,5728000b3d702a1.jpg: ignoring corrupt image/label: negative label values [ -0.0013333  -0.0048889  -0.0031111 -0.00088889]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,79a00001e38e7f.jpg: ignoring corrupt image/label: negative label values [ -0.0030769]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,7c40007b54eaca.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0013]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,7f6600069bbee74.jpg: ignoring corrupt image/label: negative label values [-0.00083333]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,838a00061692c08.jpg: ignoring corrupt image/label: negative label values [  -0.005597    -0.01306]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,8d1f000370cd27b.jpg: ignoring corrupt image/label: negative label values [   -0.00125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,8fc4000159abcff.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0133]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283554,9c7d00070c266c4.jpg: ignoring corrupt image/label: negative label values [  -0.046045]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,100b00003713f75b.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,106d1000c6d157d3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0087]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,1308a000a885b904.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,1355a000f2704a7c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0022]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,13eb000ab0293c4.jpg: ignoring corrupt image/label: negative label values [ -0.0048544]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,15ed100027715eb8.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0008]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,18980000983dd631.jpg: ignoring corrupt image/label: negative label values [ -0.0041701]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,1ffc000cee45afd.jpg: ignoring corrupt image/label: negative label values [ -0.0031381  -0.0041841  -0.0031381   -0.019874  -0.0062762  -0.0031381]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,241d00004ecfc04.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0038]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,32ab0001b164044.jpg: ignoring corrupt image/label: negative label values [  -0.011713  -0.0043924  -0.0014641   -0.014641   -0.016105  -0.0073206    -0.01757  -0.0029283]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,332b00010f268df.jpg: ignoring corrupt image/label: negative label values [ -0.0011547 -0.00071942  -0.0014388  -0.0028777   -0.015827  -0.0079137]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,38a00009b062b9c.jpg: ignoring corrupt image/label: negative label values [ -0.0031381   -0.014644  -0.0083682   -0.038703  -0.0073222   -0.069038   -0.020921]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,4fb6000411cc3a9.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,712d0006c85b0c3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0023      1.0008]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,a1a1000c0c34bed.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.001]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,a1bc000784555bb.jpg: ignoring corrupt image/label: negative label values [ -0.0016667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,cc15000b165d9c0.jpg: ignoring corrupt image/label: negative label values [-0.00076923]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,e24c0001792b397.jpg: ignoring corrupt image/label: negative label values [ -0.0038462]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283647,f3db0006702f389.jpg: ignoring corrupt image/label: negative label values [  -0.088125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,1058a0009f2049b4.jpg: ignoring corrupt image/label: negative label values [ -0.0015625]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,121cf000059ddb46.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0017]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,1234b000d933f83c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,12605000fc6112a6.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0058]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,12b2600027d91b72.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.008]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,12e3f0000110e3d8.jpg: ignoring corrupt image/label: negative label values [ -0.0058685]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,12e770003ec5c803.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0162]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,140fe0006b8b0950.jpg: ignoring corrupt image/label: negative label values [  -0.020833]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,14766000958569e6.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0031]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,14e6300059047b40.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,16a7500004388508.jpg: ignoring corrupt image/label: negative label values [ -0.0052083]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,16c9e000877c3fe6.jpg: ignoring corrupt image/label: negative label values [  -0.035417]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,17a01000ae1735ca.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0009]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,197fe0008549d9d2.jpg: ignoring corrupt image/label: negative label values [ -0.0011737]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,1ac66000c4e7f155.jpg: ignoring corrupt image/label: negative label values [   -0.11937   -0.078829]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,1e4fe00084b06e4d.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,1e54f0007d1ff11e.jpg: ignoring corrupt image/label: negative label values [ -0.0096774]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,1f4a700083051ad8.jpg: ignoring corrupt image/label: negative label values [ -0.0071048  -0.0017762]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,49820004261dc21.jpg: ignoring corrupt image/label: negative label values [  -0.046025   -0.072176]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,91fa000cda68156.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,9f4e00024746f90.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0093]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,bb280008f73745e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0061]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,e726000c82c3fbe.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283991,eb680003d010aca.jpg: ignoring corrupt image/label: negative label values [  -0.022026  -0.0014684]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,10317000f68b1b64.jpg: ignoring corrupt image/label: negative label values [  -0.012346]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,11120000ae1f7607.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,1196f000c7871696.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0129]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,11c320004d389a72.jpg: ignoring corrupt image/label: negative label values [  -0.030335   -0.050209]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,12000e7e7d513.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,160600016c0445a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0047]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,164e6000e07d514d.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0132]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,16c6800035d981ac.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0037]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,17db90002664cc5d.jpg: ignoring corrupt image/label: negative label values [  -0.014957   -0.021368   -0.029915]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,17e9f000e9293c37.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0029]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,18908000c1dcd556.jpg: ignoring corrupt image/label: negative label values [ -0.0077887]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,1a08c0007ee1cce4.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0012]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,1c07000e9571389.jpg: ignoring corrupt image/label: negative label values [  -0.066667      -0.025   -0.029167   -0.029167   -0.033333     -0.0625     -0.0625   -0.052083     -0.0625   -0.083333]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,24d4000be94c723.jpg: ignoring corrupt image/label: negative label values [  -0.027083]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,25f800025bf4345.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0012]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,29ef000a9f6fbbe.jpg: ignoring corrupt image/label: negative label values [  -0.022917   -0.016667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,2f7a000da2054d8.jpg: ignoring corrupt image/label: negative label values [  -0.010417]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,37f90009c6358cd.jpg: ignoring corrupt image/label: negative label values [     -0.025    -0.01875  -0.0041667  -0.0020833  -0.0083333   -0.010417]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,4aa90007879eebf.jpg: ignoring corrupt image/label: negative label values [  -0.021354  -0.0064815]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,4d1000f86eefa5.jpg: ignoring corrupt image/label: negative label values [    -0.0125   -0.016667  -0.0020833    -0.00625      -0.025   -0.010417   -0.052083   -0.027083   -0.033333  -0.0020833]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,56a000c39f777e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0062]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,61d3000fa525774.jpg: ignoring corrupt image/label: negative label values [   -0.00625]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,62320003977d476.jpg: ignoring corrupt image/label: negative label values [ -0.0041667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,7ddd0008e497a7e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0023]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,8b5900095a478ae.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,95dc000a3eebcf5.jpg: ignoring corrupt image/label: negative label values [ -0.0020921   -0.025105]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,97d30004711761b.jpg: ignoring corrupt image/label: negative label values [  -0.027083]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,b0a70002158ba3a.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0084]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,b51a0001b4c132d.jpg: ignoring corrupt image/label: negative label values [  -0.033333]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,c8ff0004cc0ba5b.jpg: ignoring corrupt image/label: negative label values [  -0.014085]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,d8a60000607da30.jpg: ignoring corrupt image/label: negative label values [     -0.016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/283992,e335000faeae011.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0022]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,10e00076a22cdd.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.002]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,15f8300055558bd7.jpg: ignoring corrupt image/label: negative label values [  -0.042587]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,15fd5000cfc28f1a.jpg: ignoring corrupt image/label: negative label values [  -0.032646  -0.0051546   -0.075601]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,190cd00080856bfe.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0059]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,19b8a000a3f3855c.jpg: ignoring corrupt image/label: negative label values [    -0.0125     -0.0125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1a37f000460e9172.jpg: ignoring corrupt image/label: negative label values [  -0.003125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1a4a0000ad7de710.jpg: ignoring corrupt image/label: negative label values [ -0.0016667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1ae73000458b8697.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1af2d000c6d068ef.jpg: ignoring corrupt image/label: negative label values [ -0.0011737]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1bae900025f2d372.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1c08f000c4d55c01.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.013]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1c13300086ef516d.jpg: ignoring corrupt image/label: negative label values [  -0.041068]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1caad000cf71ef6b.jpg: ignoring corrupt image/label: negative label values [  -0.010417   -0.060417   -0.035417   -0.014583]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1d051000608eeb58.jpg: ignoring corrupt image/label: negative label values [  -0.022917   -0.016667   -0.027083]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1d21d0009549909a.jpg: ignoring corrupt image/label: negative label values [  -0.002584  -0.0064599]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1d28100042c51ec3.jpg: ignoring corrupt image/label: negative label values [  -0.064583]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1d9fe00027c8be91.jpg: ignoring corrupt image/label: negative label values [  -0.065982    -0.05132]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1dbbe000ade1c99a.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,1e3a90002026ea0c.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0347]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,20c67000808e50a4.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.007]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,237b5000a8fc55ad.jpg: ignoring corrupt image/label: negative label values [  -0.036133]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,25bb3000dc9cf43a.jpg: ignoring corrupt image/label: negative label values [  -0.051245   -0.026354]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,25c3600019ba03f4.jpg: ignoring corrupt image/label: negative label values [ -0.0058565   -0.045388   -0.020498   -0.043924   -0.011713   -0.027818   -0.020498   -0.060029]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,265b2000ca68be99.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,26ed60008109d7fe.jpg: ignoring corrupt image/label: negative label values [   -0.13177]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,274fa00014f0fe6f.jpg: ignoring corrupt image/label: negative label values [ -0.0015625]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,27fdb000d1ca2ed8.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0025       1.005]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,2881c0003946dc5c.jpg: ignoring corrupt image/label: negative label values [ -0.0058594]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,28fe40000eace9e7.jpg: ignoring corrupt image/label: negative label values [ -0.0046875]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,29eff000b1372b8e.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0009]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,2a2ab0006d3be762.jpg: ignoring corrupt image/label: negative label values [ -0.0043924  -0.0087848]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,2f23f000b67f496b.jpg: ignoring corrupt image/label: negative label values [  -0.031484]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,3c9b0000eabd14e.jpg: ignoring corrupt image/label: negative label values [ -0.0064103]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,47f5000af98776c.jpg: ignoring corrupt image/label: negative label values [  -0.010417     -0.0125]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,48ec00020ba0452.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,5481000108ceae3.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0035]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,5749000ebcd8d4d.jpg: ignoring corrupt image/label: negative label values [ -0.0041667]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,57c6000c5e8e1c1.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0016]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,767b000ff80ab1a.jpg: ignoring corrupt image/label: negative label values [ -0.0010449]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,805c000f1881e0f.jpg: ignoring corrupt image/label: negative label values [ -0.0073222]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,84b900044c992c2.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0059]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,a17b00013852c31.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,a3f80002e0e0b88.jpg: ignoring corrupt image/label: negative label values [  -0.010556]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,ac3b000262aa441.jpg: ignoring corrupt image/label: negative label values [  -0.020833   -0.029167   -0.022917  -0.0020833]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,be85000db9ffa13.jpg: ignoring corrupt image/label: negative label values [ -0.0011737]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,beb8000983da7e7.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0189]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,bee0006b794213.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,bf6900075571a82.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0042]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,c354000bd72dc26.jpg: ignoring corrupt image/label: negative label values [  -0.014583]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,c59500028b1c8ee.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,cf880003b8550cf.jpg: ignoring corrupt image/label: negative label values [   -0.00625]
+[34m[1mtrain: [0mWARNING ⚠️ /Work/wangjing/data/header_det_data/PublicData/CrowdHuman/images/284193,f26e000faa521dc.jpg: ignoring corrupt image/label: negative label values [  -0.039583]
+[34m[1mtrain: [0mNew cache created: /Work/wangjing/data/header_det_data/GuiZhouBankImages/batch_01/labels.cache
+Plotting labels to runs/yolov8/header/train3/labels.jpg... 
 [34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
-[34m[1moptimizer:[0m SGD(lr=0.01, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0015), 63 bias(decay=0.0)
+[34m[1moptimizer:[0m SGD(lr=0.01, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.001), 63 bias(decay=0.0)
 Image sizes 640 train, 640 val
-Using 8 dataloader workers
-Logging results to [1mruns/yolov8/screen/train5[0m
-Starting training for 100 epochs...
+Using 16 dataloader workers
+Logging results to [1mruns/yolov8/header/train3[0m
+Starting training for 200 epochs...
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.847      0.326      0.328      0.206
+                   all       2228       4586      0.384      0.246      0.265      0.109
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.716      0.524      0.529      0.384
+                   all       2228       4586      0.768      0.606      0.709      0.297
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.597      0.487      0.522      0.388
+                   all       2228       4586      0.865      0.714       0.83      0.524
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.77      0.654      0.698      0.534
+                   all       2228       4586      0.908      0.818        0.9      0.621
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.677      0.722      0.734       0.55
+                   all       2228       4586      0.957      0.894      0.951      0.732
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.839      0.773      0.811      0.595
+                   all       2228       4586      0.945      0.898      0.952      0.719
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.828      0.817      0.844      0.632
+                   all       2228       4586      0.965      0.913      0.961      0.725
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.836      0.846      0.863      0.639
+                   all       2228       4586      0.941      0.915      0.964      0.759
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.848      0.834      0.858      0.647
+                   all       2228       4586      0.957      0.917      0.968      0.788
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.831      0.863       0.87      0.653
+                   all       2228       4586      0.965      0.933      0.976      0.786
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.868      0.856      0.879      0.664
+                   all       2228       4586      0.955       0.93      0.975      0.775
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.85      0.871      0.886      0.671
+                   all       2228       4586      0.966      0.941      0.977      0.805
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.842      0.879      0.887      0.676
+                   all       2228       4586      0.967      0.944       0.98      0.804
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.856      0.873      0.892      0.682
+                   all       2228       4586      0.975      0.943      0.982      0.827
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.868      0.866      0.894      0.685
+                   all       2228       4586      0.975      0.947      0.982      0.817
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.868      0.871      0.897      0.687
+                   all       2228       4586      0.975      0.952      0.983      0.829
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.863      0.875      0.899      0.686
+                   all       2228       4586      0.968      0.955      0.984      0.829
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.86      0.876        0.9      0.687
+                   all       2228       4586      0.976      0.954      0.985      0.837
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.862      0.874        0.9      0.689
+                   all       2228       4586      0.975      0.957      0.986      0.839
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.863      0.878      0.902      0.691
+                   all       2228       4586      0.976      0.954      0.985       0.84
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.866      0.879      0.901      0.692
+                   all       2228       4586      0.978      0.959      0.986      0.848
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.867      0.879      0.902      0.693
+                   all       2228       4586      0.977      0.959      0.987      0.851
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.871      0.883      0.904      0.695
+                   all       2228       4586      0.977      0.963      0.988      0.855
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.871      0.883      0.906      0.697
+                   all       2228       4586      0.978      0.964      0.989      0.857
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.872      0.885      0.906      0.697
+                   all       2228       4586      0.981      0.961      0.988      0.858
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.871      0.888      0.908      0.698
+                   all       2228       4586      0.982      0.961      0.989      0.861
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.87      0.889      0.909      0.699
+                   all       2228       4586      0.984      0.962      0.989      0.861
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.869       0.89       0.91        0.7
+                   all       2228       4586      0.984      0.961       0.99      0.863
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.871       0.89      0.911      0.701
+                   all       2228       4586      0.985      0.962       0.99      0.864
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.871      0.893      0.912      0.702
+                   all       2228       4586       0.99      0.958       0.99      0.866
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.872      0.893      0.914      0.703
+                   all       2228       4586      0.987      0.962      0.991      0.865
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.875      0.892      0.914      0.705
+                   all       2228       4586      0.986      0.961       0.99      0.867
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.875      0.891      0.915      0.707
+                   all       2228       4586      0.986      0.963       0.99      0.867
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.877      0.893      0.916      0.709
+                   all       2228       4586      0.985      0.964       0.99      0.868
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.881      0.885      0.917      0.711
+                   all       2228       4586      0.984      0.965       0.99      0.869
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.886      0.886      0.919      0.711
+                   all       2228       4586      0.986      0.964      0.991      0.869
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.888      0.884      0.919      0.713
+                   all       2228       4586      0.985      0.964      0.991       0.87
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.894      0.881      0.919      0.713
+                   all       2228       4586      0.985      0.964       0.99       0.87
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.884      0.888      0.922      0.714
+                   all       2228       4586      0.988      0.964      0.991       0.87
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.882      0.892      0.923      0.716
+                   all       2228       4586      0.988      0.964      0.991       0.87
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.881      0.892      0.923      0.719
+                   all       2228       4586      0.988      0.965      0.991      0.871
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.88      0.896      0.923      0.719
+                   all       2228       4586      0.988      0.964      0.991      0.872
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.882      0.896      0.924       0.72
+                   all       2228       4586      0.986      0.966      0.991      0.872
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.883      0.898      0.925      0.722
+                   all       2228       4586      0.987      0.966      0.991      0.873
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.882      0.903      0.926      0.723
+                   all       2228       4586      0.988      0.966      0.991      0.873
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.877      0.905      0.927      0.725
+                   all       2228       4586      0.986      0.967      0.991      0.873
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.878      0.904      0.927      0.726
+                   all       2228       4586      0.985      0.967      0.991      0.873
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.878      0.911      0.927      0.727
+                   all       2228       4586      0.985      0.966      0.991      0.873
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.881       0.91      0.928      0.728
+                   all       2228       4586      0.985      0.966      0.992      0.873
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.882      0.909      0.928      0.729
+                   all       2228       4586      0.985      0.966      0.992      0.873
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.882      0.913      0.929       0.73
+                   all       2228       4586      0.985      0.966      0.992      0.873
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.883      0.916       0.93      0.731
+                   all       2228       4586      0.986      0.966      0.992      0.873
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.886      0.917      0.932      0.732
+                   all       2228       4586      0.986      0.966      0.992      0.874
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.887      0.917      0.932      0.733
+                   all       2228       4586      0.986      0.966      0.992      0.874
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.887      0.916      0.933      0.733
+                   all       2228       4586      0.986      0.967      0.992      0.874
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.887      0.915      0.934      0.734
+                   all       2228       4586      0.986      0.967      0.992      0.875
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.891       0.91      0.934      0.734
+                   all       2228       4586      0.986      0.967      0.992      0.875
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.894      0.907      0.934      0.735
+                   all       2228       4586      0.987      0.965      0.992      0.875
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.896      0.904      0.935      0.736
+                   all       2228       4586      0.987      0.965      0.992      0.875
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.895      0.907      0.936      0.736
+                   all       2228       4586      0.988      0.965      0.992      0.876
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.896      0.906      0.935      0.737
+                   all       2228       4586      0.988      0.965      0.991      0.876
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.908      0.898      0.936      0.739
+                   all       2228       4586      0.988      0.965      0.991      0.876
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.91        0.9      0.936       0.74
+                   all       2228       4586      0.988      0.965      0.991      0.876
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.91      0.899      0.937      0.741
+                   all       2228       4586      0.988      0.965      0.991      0.876
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.911      0.899      0.938      0.742
+                   all       2228       4586      0.988      0.965      0.991      0.876
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.909      0.902      0.939      0.744
+                   all       2228       4586      0.987      0.965      0.991      0.877
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.909      0.904       0.94      0.745
+                   all       2228       4586      0.987      0.966      0.991      0.877
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.902      0.911      0.941      0.747
+                   all       2228       4586      0.987      0.966      0.991      0.877
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.905      0.912      0.942      0.748
+                   all       2228       4586      0.987      0.966      0.991      0.878
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.903      0.913      0.942      0.749
+                   all       2228       4586      0.988      0.965      0.992      0.878
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.906       0.91      0.942       0.75
+                   all       2228       4586      0.986      0.966      0.992      0.878
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.916      0.906      0.943      0.752
+                   all       2228       4586      0.988      0.964      0.991      0.878
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.917      0.905      0.944      0.753
+                   all       2228       4586      0.988      0.964      0.992      0.878
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.917      0.908      0.944      0.754
+                   all       2228       4586      0.988      0.964      0.991      0.879
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.918      0.907      0.944      0.756
+                   all       2228       4586      0.988      0.964      0.991      0.879
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.916      0.909      0.945      0.756
+                   all       2228       4586      0.987      0.966      0.991      0.879
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.917      0.908      0.945      0.758
+                   all       2228       4586      0.986      0.966      0.991      0.879
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.918      0.909      0.946      0.759
+                   all       2228       4586      0.987      0.966      0.991      0.879
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.922      0.908      0.947       0.76
+                   all       2228       4586      0.987      0.967      0.991       0.88
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.92      0.908      0.947      0.761
+                   all       2228       4586      0.987      0.966      0.991       0.88
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.92      0.909      0.948      0.762
+                   all       2228       4586      0.987      0.966      0.991       0.88
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.921      0.909       0.95      0.764
+                   all       2228       4586      0.988      0.966      0.991       0.88
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.905      0.923       0.95      0.766
+                   all       2228       4586      0.987      0.967      0.991      0.881
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.906      0.925       0.95      0.767
+                   all       2228       4586      0.987      0.967      0.991      0.881
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.906      0.925      0.951      0.768
+                   all       2228       4586      0.986      0.968      0.992      0.882
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.906      0.925      0.953      0.769
+                   all       2228       4586      0.986      0.968      0.992      0.882
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.908      0.924      0.953      0.771
+                   all       2228       4586      0.986      0.968      0.992      0.882
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.907      0.925      0.953      0.772
+                   all       2228       4586      0.987      0.968      0.992      0.883
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.91      0.924      0.954      0.772
+                   all       2228       4586      0.987      0.967      0.992      0.883
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.912      0.926      0.954      0.773
+                   all       2228       4586      0.988      0.967      0.992      0.883
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.967      0.992      0.883
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.967      0.992      0.884
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.967      0.992      0.884
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.968      0.992      0.885
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.968      0.992      0.885
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.968      0.992      0.885
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.968      0.992      0.885
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.968      0.992      0.886
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.985      0.972      0.992      0.886
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.985      0.972      0.992      0.886
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987       0.97      0.992      0.886
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.985      0.972      0.992      0.886
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.985      0.971      0.992      0.887
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988       0.97      0.992      0.887
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.969      0.992      0.888
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987       0.97      0.992      0.888
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.984      0.972      0.992      0.888
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.985      0.972      0.992      0.888
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.985      0.971      0.992      0.888
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.983      0.973      0.992      0.888
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.984      0.972      0.992      0.889
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.986      0.971      0.992      0.889
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.985      0.971      0.993      0.889
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.968      0.993      0.889
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.969      0.993       0.89
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.969      0.993       0.89
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987       0.97      0.993      0.891
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987       0.97      0.993      0.891
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988       0.97      0.993      0.892
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988       0.97      0.993      0.892
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987       0.97      0.993      0.893
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.971      0.993      0.893
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.971      0.993      0.893
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.971      0.993      0.893
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.971      0.993      0.893
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.972      0.993      0.894
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.972      0.993      0.894
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.972      0.993      0.894
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.972      0.993      0.894
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.972      0.993      0.895
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.972      0.993      0.895
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.974      0.993      0.895
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.973      0.993      0.896
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.973      0.993      0.897
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.973      0.993      0.897
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.973      0.993      0.897
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.972      0.993      0.898
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.972      0.993      0.898
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.973      0.993      0.898
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.974      0.993      0.899
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.974      0.993      0.899
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.975      0.993      0.899
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.975      0.993        0.9
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.975      0.993        0.9
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.975      0.993        0.9
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.974      0.994      0.901
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.974      0.993      0.901
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.973      0.993      0.901
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.973      0.994      0.901
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.973      0.994      0.901
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.973      0.994      0.901
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.976      0.994      0.902
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.976      0.994      0.902
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.977      0.994      0.903
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987      0.977      0.994      0.903
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987      0.977      0.994      0.903
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.976      0.994      0.903
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987      0.977      0.994      0.904
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.976      0.994      0.904
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987      0.977      0.994      0.905
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.977      0.994      0.905
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.976      0.994      0.906
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.976      0.994      0.906
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.977      0.994      0.906
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.977      0.994      0.907
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987      0.978      0.994      0.907
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987      0.978      0.994      0.908
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987      0.978      0.994      0.908
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987      0.978      0.994      0.909
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.977      0.994      0.909
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.977      0.994       0.91
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.978      0.994       0.91
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987      0.979      0.994       0.91
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.979      0.994       0.91
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.987      0.979      0.994      0.911
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.978      0.994      0.911
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.978      0.994      0.911
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.979      0.994      0.911
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.988      0.979      0.994      0.912
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.978      0.994      0.912
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.978      0.994      0.913
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586       0.99      0.977      0.994      0.913
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.991      0.977      0.994      0.914
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.992      0.976      0.994      0.914
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.992      0.976      0.994      0.915
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.992      0.976      0.994      0.915
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.992      0.976      0.994      0.915
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.993      0.975      0.994      0.916
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.991      0.977      0.994      0.916
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       2228       4586      0.989      0.979      0.994      0.916
 Closing dataloader mosaic
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.91      0.929      0.955      0.773
+                   all       2228       4586       0.99      0.979      0.994      0.917
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.911      0.931      0.956      0.774
+                   all       2228       4586       0.99      0.979      0.994      0.917
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.908      0.936      0.956      0.774
+                   all       2228       4586      0.993      0.977      0.994      0.917
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565       0.91      0.935      0.958      0.776
+                   all       2228       4586      0.992      0.977      0.994      0.918
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.911      0.936      0.958      0.777
+                   all       2228       4586      0.993      0.977      0.994      0.918
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.914      0.937      0.958      0.778
+                   all       2228       4586      0.993      0.978      0.994      0.919
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.914      0.935      0.959      0.778
+                   all       2228       4586      0.993      0.978      0.994      0.919
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.917      0.933      0.959      0.779
+                   all       2228       4586      0.993      0.978      0.994      0.919
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.918      0.935       0.96       0.78
+                   all       2228       4586      0.994      0.977      0.994       0.92
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       2528       3565      0.914      0.941       0.96       0.78
+                   all       2228       4586      0.994      0.977      0.994       0.92
 
-100 epochs completed in 16.078 hours.
-Optimizer stripped from runs/yolov8/screen/train5/weights/last.pt, 6.2MB
-Optimizer stripped from runs/yolov8/screen/train5/weights/best.pt, 6.2MB
+200 epochs completed in 6.648 hours.
+Optimizer stripped from runs/yolov8/header/train3/weights/last.pt, 6.3MB
+Optimizer stripped from runs/yolov8/header/train3/weights/best.pt, 6.3MB
 
-Validating runs/yolov8/screen/train5/weights/best.pt...
-Ultralytics YOLOv8.1.34 🚀 Python-3.9.21 torch-2.0.1+cu117 CUDA:5 (NVIDIA A800 80GB PCIe, 81342MiB)
-bank_YOLOv8 summary (fused): 168 layers, 3006038 parameters, 0 gradients, 8.1 GFLOPs
-                   all       2528       3565      0.918      0.935       0.96       0.78
-                 phone       2528        904      0.881      0.873      0.927      0.602
-                screen       2528       2661      0.955      0.997      0.993      0.959
-Speed: 0.8ms preprocess, 0.3ms inference, 0.0ms loss, 0.4ms postprocess per image
-Results saved to [1mruns/yolov8/screen/train5[0m
+Validating runs/yolov8/header/train3/weights/best.pt...
+Ultralytics YOLOv8.1.34 🚀 Python-3.9.21 torch-2.0.1+cu117 CUDA:4 (NVIDIA A800 80GB PCIe, 81342MiB)
+                                                           CUDA:6 (NVIDIA A800 80GB PCIe, 81342MiB)
+bank_YOLOv8 summary (fused): 168 layers, 3005843 parameters, 0 gradients, 8.1 GFLOPs
+                   all       2228       4586      0.994      0.978      0.994       0.92
+Speed: 0.4ms preprocess, 0.4ms inference, 0.0ms loss, 0.4ms postprocess per image
+Results saved to [1mruns/yolov8/header/train3[0m

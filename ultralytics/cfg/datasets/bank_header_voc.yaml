@@ -1,0 +1,36 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# PASCAL VOC dataset http://host.robots.ox.ac.uk/pascal/VOC by University of Oxford
+# Documentation: # Documentation: https://docs.ultralytics.com/datasets/detect/voc/
+# Example usage: yolo train data=VOC.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── VOC  ← downloads here (2.8 GB)
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: /Work/wangjing/data/header_det_data
+train: # train images (relative to 'path')  16551 images
+  - PublicData/CrowdHuman/images
+  - PublicData/SCUT_HEAD_Part_A_B/images
+  - PublicData/2024-09-05-yayun-anbao/images
+  - PublicData/masked_whn/images
+  - PublicData/sunglasses/images
+  - YiXingBankImages/ATM-facetoface/images
+  - GuiZhouBankImages/batch_01/images
+  - GuiZhouBankImages/batch_03/images
+  - GuiZhouBankImages/batch_04/images
+  - GuiZhouBankImages/batch_05/images
+  - GuiZhouBankImages/batch_06/images
+  - ShuangLuData/dataset_2018/images
+  - ShuangLuData/spider_dataset_20250429/images
+
+val: # val images (relative to 'path')  4952 images
+  - GuiZhouBankImages/guizhou_poc_show_01_02_03_04/images
+    #- ShuangLuData/dataset_2018/images
+    #- ShuangLuData/spider_dataset_20250429/images
+test: # test images (optional)
+  - GuiZhouBankImages/guizhou_poc_show_01_02_03_04/images
+
+# Classes
+names:
+  0: header

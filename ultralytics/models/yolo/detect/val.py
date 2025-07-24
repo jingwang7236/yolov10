@@ -10,7 +10,7 @@ from ultralytics.data import build_dataloader, build_yolo_dataset, converter
 from ultralytics.engine.validator import BaseValidator
 from ultralytics.utils import LOGGER, ops
 from ultralytics.utils.checks import check_requirements
-from ultralytics.utils.metrics import ConfusionMatrix, DetMetrics, box_iou
+from ultralytics.utils.metrics import ConfusionMatrix, DetMetrics, box_iou, bbox_iou
 from ultralytics.utils.plotting import output_to_target, plot_images
 
 
@@ -205,6 +205,8 @@ class DetectionValidator(BaseValidator):
             (torch.Tensor): Correct prediction matrix of shape [N, 10] for 10 IoU levels.
         """
         iou = box_iou(gt_bboxes, detections[:, :4])
+        # TODO:bbox_iou方法报错
+        # iou = bbox_iou(gt_bboxes, detections[:, :4], xywh=False, GIoU=False, DIoU=True, CIoU=False)
         return self.match_predictions(detections[:, 5], gt_cls, iou)
 
     def build_dataset(self, img_path, mode="val", batch=None):
